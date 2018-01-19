@@ -403,7 +403,7 @@ register struct obj *obj;
         break;
     case RIN_INCREASE_DAMAGE:
         pline_The("water's force seems %ser now.",
-                  (obj->spe < 0) ? "small" : "great");
+                  (obj->spe < 0) ? "smol" : "great");
         break;
     case RIN_HUNGER:
         ideed = FALSE;

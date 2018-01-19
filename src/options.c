@@ -982,9 +982,9 @@ OPTIONS=
 MSGTYPE=stop"You swap places with "
 MSGTYPE=st.op "You swap places with "
 MSGTYPE=stop "You swap places with \"
-MENUCOLOR=" blessed "green&none
+MENUCOLOR=" yuji sakai "green&none
 MENUCOLOR=" holy " = green&reverse
-MENUCOLOR=" cursed " = red&uline
+MENUCOLOR=" rude " = red&uline
 MENUCOLOR=" unholy " = reed
 OPTIONS=!legacy:true,fooo
 OPTIONS=align:!pin
@@ -5925,9 +5925,9 @@ struct fruit *replace_fruit;
                 numeric = TRUE;
         }
         if (found || numeric
-            || !strncmp(str, "cursed ", 7)
-            || !strncmp(str, "uncursed ", 9)
-            || !strncmp(str, "blessed ", 8)
+            || !strncmp(str, "rude ", 5)
+            || !strncmp(str, "nice ", 5)
+            || !strncmp(str, "yuji sakai ", 11)
             || !strncmp(str, "partly eaten ", 13)
             || (!strncmp(str, "tin of ", 7)
                 && (!strcmp(str + 7, "spinach")

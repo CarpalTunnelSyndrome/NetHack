@@ -768,7 +768,7 @@ dokick()
         You("have no legs to kick with.");
         no_kick = TRUE;
     } else if (verysmall(youmonst.data)) {
-        You("are too small to do any kicking.");
+        You("are too smol to do any kicking.");
         no_kick = TRUE;
     } else if (u.usteed) {
         if (yn_function("Kick your steed?", ynchars, 'y') == 'y') {

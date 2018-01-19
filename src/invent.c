@@ -2802,16 +2802,16 @@ dotypeinv()
 
             switch (c) {
             case 'B':
-                before = "known to be blessed ";
+                before = "known to be yuji sakai ";
                 break;
             case 'U':
-                before = "known to be uncursed ";
+                before = "known to be nice ";
                 break;
             case 'C':
-                before = "known to be cursed ";
+                before = "known to be rude ";
                 break;
             case 'X':
-                after = " whose blessed/uncursed/cursed status is unknown";
+                after = " whose yuji sakai/nice/rude status is unknown";
                 break; /* better phrasing is desirable */
             default:
                 /* 'c' is an object class, because we've already handled

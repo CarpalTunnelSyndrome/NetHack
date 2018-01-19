@@ -218,7 +218,7 @@ NEARDATA struct permonst mons[] = {
         SIZ(300, 250, MS_BARK, MZ_SMALL), MR_POISON, 0,
         M1_NOHANDS | M1_POIS | M1_REGEN | M1_CARNIVORE,
         M2_NOPOLY | M2_WERE | M2_HOSTILE, M3_INFRAVISIBLE, CLR_BROWN),
-    MON("little dog", S_DOG, LVL(2, 18, 6, 0, 0), (G_GENO | 1),
+    MON("little doge", S_DOG, LVL(2, 18, 6, 0, 0), (G_GENO | 1),
         A(ATTK(AT_BITE, AD_PHYS, 1, 6), NO_ATTK, NO_ATTK, NO_ATTK, NO_ATTK,
           NO_ATTK),
         SIZ(150, 150, MS_BARK, MZ_SMALL), 0, 0,
@@ -230,13 +230,13 @@ NEARDATA struct permonst mons[] = {
         SIZ(400, 200, MS_BARK, MZ_MEDIUM), 0, 0,
         M1_ANIMAL | M1_NOHANDS | M1_CARNIVORE, M2_HOSTILE, M3_INFRAVISIBLE,
         CLR_YELLOW),
-    MON("dog", S_DOG, LVL(4, 16, 5, 0, 0), (G_GENO | 1),
+    MON("doge", S_DOG, LVL(4, 16, 5, 0, 0), (G_GENO | 1),
         A(ATTK(AT_BITE, AD_PHYS, 1, 6), NO_ATTK, NO_ATTK, NO_ATTK, NO_ATTK,
           NO_ATTK),
         SIZ(400, 200, MS_BARK, MZ_MEDIUM), 0, 0,
         M1_ANIMAL | M1_NOHANDS | M1_CARNIVORE, M2_DOMESTIC, M3_INFRAVISIBLE,
         HI_DOMESTIC),
-    MON("large dog", S_DOG, LVL(6, 15, 4, 0, 0), (G_GENO | 1),
+    MON("large doge", S_DOG, LVL(6, 15, 4, 0, 0), (G_GENO | 1),
         A(ATTK(AT_BITE, AD_PHYS, 2, 4), NO_ATTK, NO_ATTK, NO_ATTK, NO_ATTK,
           NO_ATTK),
         SIZ(800, 250, MS_BARK, MZ_MEDIUM), 0, 0,
@@ -564,7 +564,7 @@ NEARDATA struct permonst mons[] = {
     /*
      * mimics
      */
-    MON("small mimic", S_MIMIC, LVL(7, 3, 7, 0, 0), (G_GENO | 2),
+    MON("smol mimic", S_MIMIC, LVL(7, 3, 7, 0, 0), (G_GENO | 2),
         A(ATTK(AT_CLAW, AD_PHYS, 3, 4), NO_ATTK, NO_ATTK, NO_ATTK, NO_ATTK,
           NO_ATTK),
         SIZ(300, 200, MS_SILENT, MZ_MEDIUM), MR_ACID, 0,
@@ -769,6 +769,12 @@ NEARDATA struct permonst mons[] = {
             | M1_HERBIVORE,
         /* In reality, they tunnel instead of cutting lumber.  Oh, well. */
         M2_WANDER | M2_HOSTILE, M3_INFRAVISIBLE, CLR_BROWN),
+    MON("spikeman", S_RODENT, LVL(7, 12, -2, 0, -5), (G_GENO | 2),
+        A(ATTK(AT_CLAW, AD_PHYS, 3, 3), ATTK(AT_STNG, AD_DRST, 1, 6), NO_ATTK,
+          NO_ATTK, NO_ATTK, NO_ATTK),
+        SIZ(450, 300, MS_SILENT, MZ_LARGE), MR_FIRE, 0,
+        M1_ANIMAL | M1_NOHEAD | M1_NOHANDS | M1_CARNIVORE | M1_POIS,
+        M2_HOSTILE | M2_STRONG | M2_MALE, M3_INFRAVISIBLE, CLR_BROWN),
     /*
      * spiders & scorpions (keep webmaker() in sync if new critters are added)
      */
@@ -1710,7 +1716,7 @@ struct permonst _mons2[] = {
         M1_BREATHLESS | M1_AMORPHOUS | M1_NOEYES | M1_NOLIMBS | M1_NOHEAD
             | M1_MINDLESS | M1_OMNIVORE | M1_ACID | M1_POIS,
         M2_HOSTILE | M2_NEUTER, 0, CLR_GREEN),
-    MON("black pudding", S_PUDDING, LVL(10, 6, 6, 0, 0),
+    MON("flube", S_PUDDING, LVL(10, 6, 6, 0, 0),
         (G_GENO | G_NOCORPSE | 1),
         A(ATTK(AT_BITE, AD_CORR, 3, 8), ATTK(AT_NONE, AD_CORR, 0, 0), NO_ATTK,
           NO_ATTK, NO_ATTK, NO_ATTK),

@@ -897,7 +897,7 @@ register struct monst *mtmp;
         static const char
             *const soldier_foe_msg[3] =
                 {
-                  "Resistance is useless!", "You're dog meat!", "Surrender!",
+                  "Resistance is useless!", "You're doge meat!", "Surrender!",
                 },
                    *const soldier_pax_msg[3] = {
                        "What lousy pay we're getting here!",

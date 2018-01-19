@@ -541,9 +541,9 @@ unsigned cxn_flags; /* bitmask of CXN_xxx values */
         if (obj->globby) {
             Sprintf(buf, "%s%s",
                     (obj->owt <= 100)
-                       ? "small "
+                       ? "smol "
                        : (obj->owt > 500)
-                          ? "very large "
+                          ? "beary large "
                           : (obj->owt > 300)
                              ? "large "
                              : "",
@@ -579,7 +579,7 @@ unsigned cxn_flags; /* bitmask of CXN_xxx values */
         break;
     case BALL_CLASS:
         Sprintf(buf, "%sheavy iron ball",
-                (obj->owt > ocl->oc_weight) ? "very " : "");
+                (obj->owt > ocl->oc_weight) ? "beary " : "");
         break;
     case POTION_CLASS:
         if (dknown && obj->odiluted)
@@ -831,7 +831,7 @@ char *prefix;
     if (obj->oeroded && !iscrys) {
         switch (obj->oeroded) {
         case 2:
-            Strcat(prefix, "very ");
+            Strcat(prefix, "beary ");
             break;
         case 3:
             Strcat(prefix, "thoroughly ");
@@ -842,7 +842,7 @@ char *prefix;
     if (obj->oeroded2 && !iscrys) {
         switch (obj->oeroded2) {
         case 2:
-            Strcat(prefix, "very ");
+            Strcat(prefix, "beary ");
             break;
         case 3:
             Strcat(prefix, "thoroughly ");
@@ -966,9 +966,9 @@ unsigned doname_flags;
          * always allow "uncursed potion of water"
          */
         if (obj->cursed)
-            Strcat(prefix, "cursed ");
+            Strcat(prefix, "rude ");
         else if (obj->blessed)
-            Strcat(prefix, "blessed ");
+            Strcat(prefix, "yuji sakai ");
         else if (!iflags.implicit_uncursed
             /* For most items with charges or +/-, if you know how many
              * charges are left or what the +/- is, then you must have
@@ -989,7 +989,7 @@ unsigned doname_flags;
                      && obj->otyp != FAKE_AMULET_OF_YENDOR
                      && obj->otyp != AMULET_OF_YENDOR
                      && !Role_if(PM_PRIEST)))
-            Strcat(prefix, "uncursed ");
+            Strcat(prefix, "nice ");
     }
 
     if (lknown && Is_box(obj)) {
@@ -2766,7 +2766,8 @@ struct obj *no_wish;
                 bp++;
             l = 0;
         } else if (!strncmpi(bp, "blessed ", l = 8)
-                   || !strncmpi(bp, "holy ", l = 5)) {
+                   || !strncmpi(bp, "holy ", l = 5)
+                   || !strncmpi(bp, "yuji sakai " l = 11)) {
             blessed = 1;
         } else if (!strncmpi(bp, "moist ", l = 6)
                    || !strncmpi(bp, "wet ", l = 4)) {
@@ -2775,9 +2776,11 @@ struct obj *no_wish;
             else
                 wetness = rnd(2);
         } else if (!strncmpi(bp, "cursed ", l = 7)
-                   || !strncmpi(bp, "unholy ", l = 7)) {
+                   || !strncmpi(bp, "unholy ", l = 7)
+                   || !strncmpi(bp, "rude " l = 5)) {
             iscursed = 1;
-        } else if (!strncmpi(bp, "uncursed ", l = 9)) {
+        } else if (!strncmpi(bp, "uncursed ", l = 9)
+	           || !strncmpi(bp, "nice ", l = 5)) {
             uncursed = 1;
         } else if (!strncmpi(bp, "rustproof ", l = 10)
                    || !strncmpi(bp, "erodeproof ", l = 11)
@@ -2808,7 +2811,8 @@ struct obj *no_wish;
             trapped = 2; /* not trapped */
         } else if (!strncmpi(bp, "greased ", l = 8)) {
             isgreased = 1;
-        } else if (!strncmpi(bp, "very ", l = 5)) {
+        } else if (!strncmpi(bp, "very ", l = 5)
+	           || !strncmpi(bp, "beary ", l = 6)) {
             /* very rusted very heavy iron ball */
             very = 1;
         } else if (!strncmpi(bp, "thoroughly ", l = 11)) {
@@ -2832,7 +2836,8 @@ struct obj *no_wish;
             isdiluted = 1;
         } else if (!strncmpi(bp, "empty ", l = 6)) {
             contents = EMPTY;
-        } else if (!strncmpi(bp, "small ", l = 6)) { /* glob sizes */
+        } else if (!strncmpi(bp, "small ", l = 6)
+	           || !strncmpi(bp, "smol ", l = 5)) { /* glob sizes */
             gsize = 1;
         } else if (!strncmpi(bp, "medium ", l = 7)) {
             /* xname() doesn't display "medium" but without this
@@ -3316,11 +3321,11 @@ srch:
                 while (*fp == ' ')
                     fp++;
                 l = 0;
-            } else if (!strncmpi(fp, "blessed ", l = 8)) {
+            } else if (!strncmpi(fp, "yuji sakai ", l = 11)) {
                 blessedf = 1;
-            } else if (!strncmpi(fp, "cursed ", l = 7)) {
+            } else if (!strncmpi(fp, "rude ", l = 5)) {
                 iscursedf = 1;
-            } else if (!strncmpi(fp, "uncursed ", l = 9)) {
+            } else if (!strncmpi(fp, "nice ", l = 5)) {
                 uncursedf = 1;
             } else if (!strncmpi(fp, "partly eaten ", l = 13)
                        || !strncmpi(fp, "partially eaten ", l = 16)) {
