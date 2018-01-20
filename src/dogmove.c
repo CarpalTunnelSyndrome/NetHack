@@ -219,7 +219,7 @@ boolean devour;
         edog->hungrytime = monstermoves;
     nutrit = dog_nutrition(mtmp, obj);
 
-    deadmimic = (obj->otyp == CORPSE && (obj->corpsenm == PM_SMALL_MIMIC
+    deadmimic = (obj->otyp == CORPSE && (obj->corpsenm == PM_SMOL_MIMIC
                                          || obj->corpsenm == PM_LARGE_MIMIC
                                          || obj->corpsenm == PM_GIANT_MIMIC));
     slimer = (obj->otyp == CORPSE && obj->corpsenm == PM_GREEN_SLIME);
@@ -1330,12 +1330,12 @@ static struct qmchoices {
     uchar m_ap_type;      /* what is the thing it is mimicing? */
 } qm[] = {
     /* Things that some pets might be thinking about at the time */
-    { PM_LITTLE_DOG, 0, PM_KITTEN, M_AP_MONSTER },
-    { PM_DOG, 0, PM_HOUSECAT, M_AP_MONSTER },
-    { PM_LARGE_DOG, 0, PM_LARGE_CAT, M_AP_MONSTER },
-    { PM_KITTEN, 0, PM_LITTLE_DOG, M_AP_MONSTER },
-    { PM_HOUSECAT, 0, PM_DOG, M_AP_MONSTER },
-    { PM_LARGE_CAT, 0, PM_LARGE_DOG, M_AP_MONSTER },
+    { PM_LITTLE_DOGE, 0, PM_KITTEN, M_AP_MONSTER },
+    { PM_DOGE, 0, PM_HOUSECAT, M_AP_MONSTER },
+    { PM_LARGE_DOGE, 0, PM_LARGE_CAT, M_AP_MONSTER },
+    { PM_KITTEN, 0, PM_LITTLE_DOGE, M_AP_MONSTER },
+    { PM_HOUSECAT, 0, PM_DOGE, M_AP_MONSTER },
+    { PM_LARGE_CAT, 0, PM_LARGE_DOGE, M_AP_MONSTER },
     { PM_HOUSECAT, 0, PM_GIANT_RAT, M_AP_MONSTER },
     { 0, S_DOG, SINK,
       M_AP_FURNITURE }, /* sorry, no fire hydrants in NetHack */

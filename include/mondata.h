@@ -196,7 +196,7 @@
          && (ptr) != &mons[PM_LEATHER_GOLEM]) || noncorporeal(ptr))
 #define vegetarian(ptr) \
     (vegan(ptr)         \
-     || ((ptr)->mlet == S_PUDDING && (ptr) != &mons[PM_BLACK_PUDDING]))
+     || ((ptr)->mlet == S_PUDDING && (ptr) != &mons[PM_FLUBE]))
 
 /* monkeys are tameable via bananas but not pacifiable via food,
    otherwise their theft attack could be nullified too easily;

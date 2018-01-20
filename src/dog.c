@@ -60,9 +60,9 @@ pet_type()
     else if (preferred_pet == 'c')
         return  PM_KITTEN;
     else if (preferred_pet == 'd')
-        return  PM_LITTLE_DOG;
+        return  PM_LITTLE_DOGE;
     else
-        return  rn2(2) ? PM_KITTEN : PM_LITTLE_DOG;
+        return  rn2(2) ? PM_KITTEN : PM_LITTLE_DOGE;
 }
 
 struct monst *
@@ -159,7 +159,7 @@ makedog()
         return ((struct monst *) 0);
 
     pettype = pet_type();
-    if (pettype == PM_LITTLE_DOG)
+    if (pettype == PM_LITTLE_DOGE)
         petname = dogname;
     else if (pettype == PM_PONY)
         petname = horsename;
@@ -167,7 +167,7 @@ makedog()
         petname = catname;
 
     /* default pet names */
-    if (!*petname && pettype == PM_LITTLE_DOG) {
+    if (!*petname && pettype == PM_LITTLE_DOGE) {
         /* All of these names were for dogs. */
         if (Role_if(PM_CAVEMAN))
             petname = "Slasher"; /* The Warrior */

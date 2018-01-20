@@ -421,7 +421,7 @@ int type;
             struct monst *mtmp;
 
             if (level_difficulty() >= 9 && !rn2(5)
-                && !((mvitals[PM_SMALL_MIMIC].mvflags & G_GONE)
+                && !((mvitals[PM_SMOL_MIMIC].mvflags & G_GONE)
                      && (mvitals[PM_LARGE_MIMIC].mvflags & G_GONE)
                      && (mvitals[PM_GIANT_MIMIC].mvflags & G_GONE))) {
                 /* make a mimic instead */

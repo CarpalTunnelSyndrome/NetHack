@@ -1161,13 +1161,13 @@ dokick()
                 exercise(A_DEX, TRUE);
                 return 1;
             } else if (!(maploc->looted & S_LPUDDING) && !rn2(3)
-                       && !(mvitals[PM_BLACK_PUDDING].mvflags & G_GONE)) {
+                       && !(mvitals[PM_FLUBE].mvflags & G_GONE)) {
                 if (Blind)
-                    You_hear("a gushing sound.");
+                    You_hear("a flubey sound.");
                 else
-                    pline("A %s ooze gushes up from the drain!",
+                    pline("A %s flube gushes up from the drain!",
                           hcolor(NH_BLACK));
-                (void) makemon(&mons[PM_BLACK_PUDDING], x, y, NO_MM_FLAGS);
+                (void) makemon(&mons[PM_FLUBE], x, y, NO_MM_FLAGS);
                 exercise(A_DEX, TRUE);
                 newsym(x, y);
                 maploc->looted |= S_LPUDDING;

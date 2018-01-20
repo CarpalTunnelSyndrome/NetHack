@@ -411,7 +411,7 @@ register struct monst *magr, *mdef;
                 tmp -= hitval(otmp, mdef);
             if (strike) {
                 res[i] = hitmm(magr, mdef, mattk);
-                if ((mdef->data == &mons[PM_BLACK_PUDDING]
+                if ((mdef->data == &mons[PM_FLUBE]
                      || mdef->data == &mons[PM_BROWN_PUDDING]) && otmp
                     && objects[otmp->otyp].oc_material == IRON
                     && mdef->mhp > 1

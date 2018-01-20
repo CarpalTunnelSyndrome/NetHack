@@ -2767,7 +2767,7 @@ struct obj *no_wish;
             l = 0;
         } else if (!strncmpi(bp, "blessed ", l = 8)
                    || !strncmpi(bp, "holy ", l = 5)
-                   || !strncmpi(bp, "yuji sakai " l = 11)) {
+                   || !strncmpi(bp, "yuji sakai ", l = 11)) {
             blessed = 1;
         } else if (!strncmpi(bp, "moist ", l = 6)
                    || !strncmpi(bp, "wet ", l = 4)) {
@@ -2777,7 +2777,7 @@ struct obj *no_wish;
                 wetness = rnd(2);
         } else if (!strncmpi(bp, "cursed ", l = 7)
                    || !strncmpi(bp, "unholy ", l = 7)
-                   || !strncmpi(bp, "rude " l = 5)) {
+                   || !strncmpi(bp, "rude ", l = 5)) {
             iscursed = 1;
         } else if (!strncmpi(bp, "uncursed ", l = 9)
 	           || !strncmpi(bp, "nice ", l = 5)) {
@@ -2979,7 +2979,7 @@ struct obj *no_wish;
         int globoffset = (*(p + 4) == 's') ? 9 : 8;
 
         if ((mntmp = name_to_mon(p + globoffset)) >= PM_GRAY_OOZE
-            && mntmp <= PM_BLACK_PUDDING) {
+            && mntmp <= PM_FLUBE) {
             mntmp = NON_PM; /* lie to ourselves */
             cnt = 0;        /* force only one */
         }

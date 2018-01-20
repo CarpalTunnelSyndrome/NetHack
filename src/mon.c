@@ -402,10 +402,10 @@ unsigned corpseflags;
     case PM_GRAY_OOZE:
     case PM_BROWN_PUDDING:
     case PM_GREEN_SLIME:
-    case PM_BLACK_PUDDING:
+    case PM_FLUBE:
         /* we have to do this here because most other places
            expect there to be an object coming back; not this one */
-        obj = mksobj_at(GLOB_OF_BLACK_PUDDING - (PM_BLACK_PUDDING - mndx),
+        obj = mksobj_at(GLOB_OF_BLACK_PUDDING - (PM_FLUBE - mndx),
                         x, y, TRUE, FALSE);
 
         while (obj && (otmp = obj_nexto(obj)) != (struct obj *) 0) {

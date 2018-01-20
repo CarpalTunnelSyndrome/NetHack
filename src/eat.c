@@ -688,9 +688,9 @@ register int pm;
     }
 
     switch (pm) {
-    case PM_LITTLE_DOG:
-    case PM_DOG:
-    case PM_LARGE_DOG:
+    case PM_LITTLE_DOGE:
+    case PM_DOGE:
+    case PM_LARGE_DOGE:
     case PM_KITTEN:
     case PM_HOUSECAT:
     case PM_LARGE_CAT:
@@ -1011,7 +1011,7 @@ register int pm;
     case PM_LARGE_MIMIC:
         tmp += 20;
         /*FALLTHRU*/
-    case PM_SMALL_MIMIC:
+    case PM_SMOL_MIMIC:
         tmp += 20;
         if (youmonst.data->mlet != S_MIMIC && !Unchanging) {
             char buf[BUFSZ];

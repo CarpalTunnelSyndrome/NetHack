@@ -1004,7 +1004,7 @@ register struct attack *mattk;
                 if (tmp < 1)
                     tmp = 1;
                 if (u.mh - tmp > 1 && objects[otmp->otyp].oc_material == IRON
-                    && (u.umonnum == PM_BLACK_PUDDING
+                    && (u.umonnum == PM_FLUBE
                         || u.umonnum == PM_BROWN_PUDDING)) {
                     if (tmp > 1)
                         exercise(A_STR, FALSE);
