@@ -5,6 +5,7 @@
 /* font management and such */
 
 #include "mhfont.h"
+#include "stdint.h" /* uintptr_t */
 
 #define MAXFONTS 64
 

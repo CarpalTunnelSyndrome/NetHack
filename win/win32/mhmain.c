@@ -2,7 +2,9 @@
 /* Copyright (C) 2001 by Alex Kompel 	 */
 /* NetHack may be freely redistributed.  See license for details. */
 
+#define boolean boolean_ /* type name conflict with commdlg.h */
 #include "winMS.h"
+#undef boolean
 #include <commdlg.h>
 #include "date.h"
 #include "patchlevel.h"
